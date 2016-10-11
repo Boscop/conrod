@@ -20,7 +20,9 @@ path = "./src/lib.rs"
 [dependencies]
 daggy = "0.4.0"
 num = "0.1.30"
-pistoncore-input = "0.14.0"
+#pistoncore-input = "0.14.0"
+#pistoncore-input = {path = 'D:\projects\forks\piston\src\input'}
+pistoncore-input = {git = 'https://github.com/Boscop/piston'}
 rusttype = "0.2.0"
 
 # Optional dependencies and features
@@ -50,9 +52,13 @@ rusttype = "0.2.0"
 # Enables the `conrod::backend::piston_window` module.
 # Note: Use the `piston` feature for `piston_window` event conversions.
 glium = { version = "0.15.0", optional = true }
-glutin = { version = "0.6.1", optional = true }
+#glutin = { version = "0.6.1", optional = true }
+#glutin = {path = 'D:\projects\forks\glutin'}
+glutin = {git = 'https://github.com/Boscop/glutin'}
 piston2d-graphics = { version = "0.17", optional = true }
-piston_window = { version = "0.52", optional = true }
+#piston_window = { version = "0.52", optional = true }
+#piston_window = { path = 'D:\projects\forks\piston_window', optional = true }
+piston_window = { git = 'https://github.com/Boscop/piston_window', optional = true }
 [features]
 default = ["piston", "piston_window"]
 piston = ["piston2d-graphics"]

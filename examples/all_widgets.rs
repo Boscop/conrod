@@ -103,7 +103,7 @@ fn main() {
     // Construct the window.
     let mut window: PistonWindow =
         WindowSettings::new("All The Widgets!", [WIDTH, HEIGHT])
-            .opengl(opengl).exit_on_esc(true).vsync(true).build().unwrap();
+            .opengl(opengl).exit_on_esc(true).vsync(true).parent(None).build().unwrap();
 
     // construct our `Ui`.
     let mut ui = conrod::UiBuilder::new().build();
